@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -24,12 +25,16 @@ public class MainActivity extends AppCompatActivity {
 
 //if statements to ensure that when user doesn't provide input a message pops up to ask for input
             if ((nameField.getText().length()) == 0) {
-                Toast.makeText(MainActivity.this, ("Please type a name to be displayed"),
-                        Toast.LENGTH_SHORT).show();
+                Toast noText = Toast.makeText(MainActivity.this,
+                        ("Please type a name to be displayed"),Toast.LENGTH_SHORT);
+                noText.setGravity(Gravity.CENTER_VERTICAL,0,0);
+                noText.show();
             } else if ((nameField.getText().length()) != 0) {
                 String fullName = nameField.getText().toString();
-                Toast.makeText(MainActivity.this, ("Your full name is " + fullName),
-                        Toast.LENGTH_LONG).show();
+                Toast textToast= Toast.makeText(MainActivity.this,
+                        ("Your full name is " + fullName), Toast.LENGTH_LONG);
+                textToast.setGravity(Gravity.CENTER_VERTICAL,0,0);
+                textToast.show();
             }
         });
 //set onClick listener for imageviews to open websites of the respective brands using imageUrl
