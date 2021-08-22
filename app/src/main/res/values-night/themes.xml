@@ -10,11 +10,17 @@
         <item name="colorSecondaryVariant">@color/teal_200</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/black_overlay</item>
         <!-- Customize your theme here. -->
     </style>
     <style name="ThemeOverlay.HNG.FullscreenContainer" parent="">
         <item name="fullscreenBackgroundColor">@color/light_blue_900</item>
         <item name="fullscreenTextColor">@color/light_blue_A400</item>
+    </style>
+
+    <style name="MyEditTextTheme">
+        <item name="colorControlNormal">#302F2F</item>
+        <item name="colorControlActivated">#6E5D5D</item>
+        <item name="colorControlHighlight">#090909</item>
     </style>
 </resources>
